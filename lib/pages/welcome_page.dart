@@ -1,5 +1,6 @@
 import 'package:demo_app/Widgets/responsive_button.dart';
 import 'package:demo_app/cubit/app_cubit.dart';
+import 'package:demo_app/pages/nevpages/main_page.dart';
 import 'package:flutter/material.dart';
 import 'package:demo_app/Widgets/app_large_text.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -70,6 +71,11 @@ class _WelcomePageState extends State<WelcomePage> {
                             GestureDetector(
                                 onTap: (){
                                   BlocProvider.of<AppCubits>(context).getData();
+                                 /* Navigator.push(
+                                    context,
+                                    MaterialPageRoute(builder: (context) => const MainPage()),
+                                  );
+                                  */
                                 },
                                  child: Container(
                                    width: 200,

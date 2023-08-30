@@ -1,6 +1,8 @@
 import 'package:demo_app/cubit/app_cubit.dart';
 import 'package:demo_app/cubit/app_cubit_states.dart';
+import 'package:demo_app/pages/detail_page.dart';
 import 'package:demo_app/pages/home_page.dart';
+import 'package:demo_app/pages/nevpages/main_page.dart';
 import 'package:demo_app/pages/welcome_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -19,10 +21,12 @@ class _AppCubitlogicsState extends State<AppCubitlogics> {
     return Scaffold(
       body:BlocBuilder<AppCubits,CubitStates>(
         builder: (context,state){
-          if (state is WelcomeState) {
+          if (state is DetailState) {
+            return DetailPage();
+          } if (state is WelcomeState) {
             return WelcomePage();
-          } if (state is LoadingState) {
-            return Homepage();
+          } if (state is LoadedState) {
+            return MainPage();
           } if (state is LoadingState) {
             return Center(child:CircularProgressIndicator(),);
           }else{

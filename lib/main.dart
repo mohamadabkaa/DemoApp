@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
         create: (context)=>AppCubits(
           data:DataServices(),
         ),
-        child:AppCubitlogics() ,
+        child: AppCubitlogics() ,
       )
     );
   }

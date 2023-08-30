@@ -7,8 +7,7 @@ class MyPage extends StatelessWidget {
   Widget build(BuildContext context) {
      return Container(
         child: Center(
-          child: Text("Search Page"
-          ),
+          child: Text("Search Page"),
         )
     );
   }
